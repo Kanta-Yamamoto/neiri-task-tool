@@ -9,8 +9,8 @@ export const Header = () => {
     <>
       {session && (
         <>
-          <header className="w-full h-16">
-            <div className="max-w-[450px] m-auto h-full flex items-center justify-between">
+          <header className="w-full h-full mb-4">
+            <div className="max-w-[450px] m-auto flex items-center justify-between px-4 h-16">
               <span className="text-2xl">ひとりごつ</span>
               <Popover className="relative">
                 {session.user?.image && (

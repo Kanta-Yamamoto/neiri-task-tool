@@ -3,7 +3,7 @@ import { signIn } from "next-auth/react";
 export const LoginComponent = () => {
   return (
     <>
-      <div className="flex flex-col justify-center bg-white mt-20 p-10 rounded-md w-[450px]">
+      <div className="flex flex-col justify-center bg-white mt-20 p-10 rounded-md max-w-[450px]">
         <p className="flex justify-center items-center">
           ログインしてあなたの活動をメモしましょう
         </p>
