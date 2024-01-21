@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p ${PORT:-3332}",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p ${PORT:-3332}",
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/client": "^3.8.10",
     "@floating-ui/react": "^0.26.6",
     "@headlessui/react": "^1.7.18",
+    "graphql": "^16.8.1",
     "next": "14.1.0",
     "next-auth": "^4.24.5",
     "react": "^18",
