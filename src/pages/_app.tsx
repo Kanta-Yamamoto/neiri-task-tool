@@ -9,7 +9,7 @@ export default function App({
   pageProps: { session, ...pageProps },
 }: AppProps) {
   const client = new ApolloClient({
-    uri: "http://localhost:3000/graphql",
+    uri: process.env.BACKEND_SERVER,
     cache: new InMemoryCache(),
   });
 
