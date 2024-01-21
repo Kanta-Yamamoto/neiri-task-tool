@@ -2,30 +2,30 @@ import { gql, useQuery } from "@apollo/client";
 import { signOut } from "next-auth/react";
 
 const Memo = () => {
-  const BOOKS = gql`
-    query Books {
-      books {
+  const posts = gql`
+    query posts {
+      posts {
         title
-        author
+        id
       }
     }
   `;
 
-  type BooksType = {
+  type postsType = {
     title: string;
-    author: string;
+    id: number;
   };
 
   function Books() {
-    const { loading, error, data } = useQuery(BOOKS);
+    const { loading, error, data } = useQuery(posts);
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error :(</p>;
 
-    return data.books.map(({ title, author }: BooksType) => (
+    return data.posts.map(({ title, id }: postsType) => (
       <div key={title}>
         <p>
-          {title} by {author}
+          {title} by {id}
         </p>
       </div>
     ));
